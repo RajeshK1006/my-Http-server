@@ -3,7 +3,10 @@ package org.rajesh.https_server.handler;
 import org.rajesh.https_server.util.Logger;
 import java.io.*;
 import java.net.Socket;
+import java.util.Map;
+import java.util.HashMap;
 import org.rajesh.https_server.handler.ResponseGenerator;
+
 
 public class RequestHandler implements  Runnable{
 
@@ -29,10 +32,19 @@ public class RequestHandler implements  Runnable{
 
                 String method = extracts[0];
                 String path =  extracts[1];
+                String httpVersion = extracts[2];
+
+                ParseHeaders parser = new ParseHeaders();
+
+                Map<String, String> header = parser.parseHeader(reader);
+
+                RequestBody body = new RequestBody();
+
+                String requestBody = body.parseRequestBody(method,header,reader);
 
                 ResponseGenerator generator = new ResponseGenerator();
 
-                String httpResponse = generator.generateResponse(method,path);
+                String httpResponse = generator.generateResponse(method,path,requestBody);
 
                 output.write(httpResponse.getBytes());
 
