@@ -3,6 +3,7 @@ package org.rajesh.https_server.handler;
 import org.rajesh.https_server.util.Logger;
 import java.io.*;
 import java.net.Socket;
+import org.rajesh.https_server.handler.ResponseGenerator;
 
 public class RequestHandler implements  Runnable{
 
@@ -21,13 +22,19 @@ public class RequestHandler implements  Runnable{
                 String requestLine = reader.readLine();
                 Logger.log("Request: " + requestLine);
 
-                String httpResponse = "HTTP/1.1 200 OK\r\n" + "Content-Type: text/plain\r\n\r\n" +
-                        "Hello World rajesh!!!";
+                ExtractTokens extractor = new ExtractTokens();
+//                demo request line be like GET /(path)/HTTP 1.1 (version)
+
+                String[] extracts = extractor.extractTokens(requestLine);
+
+                String method = extracts[0];
+                String path =  extracts[1];
+
+                ResponseGenerator generator = new ResponseGenerator();
+
+                String httpResponse = generator.generateResponse(method,path);
 
                 output.write(httpResponse.getBytes());
-
-
-
 
             }
 

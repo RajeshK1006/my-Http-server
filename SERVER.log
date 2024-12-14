@@ -4,3 +4,28 @@
 2024-12-13 15:29:11 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
 2024-12-13 15:29:11 - - Request: GET / HTTP/1.1
 2024-12-13 15:29:11 - - Request: GET /favicon.ico HTTP/1.1
+2024-12-14 19:13:54 - - rajesh! Starting server on port 8080
+2024-12-14 19:13:54 - - Server is running on port 8080
+2024-12-14 19:14:04 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:14:04 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:14:04 - - Request: GET / HTTP/1.1
+2024-12-14 19:14:05 - - Request: GET /favicon.ico HTTP/1.1
+2024-12-14 19:14:13 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:14:13 - - Request: GET /home HTTP/1.1
+2024-12-14 19:14:13 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:14:19 - - Request: GET /next HTTP/1.1
+2024-12-14 19:14:19 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:14:25 - - Request: GET /index HTTP/1.1
+2024-12-14 19:14:25 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:15:47 - - Request: null
+2024-12-14 19:20:47 - - rajesh! Starting server on port 8080
+2024-12-14 19:20:47 - - Server is running on port 8080
+2024-12-14 19:20:56 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:20:56 - - Request: GET / HTTP/1.1
+2024-12-14 19:20:56 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:21:00 - - Request: GET /home HTTP/1.1
+2024-12-14 19:21:00 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:21:04 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:21:04 - - Request: GET /next HTTP/1.1
+2024-12-14 19:21:08 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-14 19:21:08 - - Request: GET /index HTTP/1.1
