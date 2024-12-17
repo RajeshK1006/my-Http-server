@@ -34233,3 +34233,16 @@
 2024-12-15 01:32:17 - - Request: POST /submit HTTP/1.1
 2024-12-15 01:32:17 - - rajesh Client is connected successfully /127.0.0.1
 2024-12-15 01:32:17 - - Request: POST /submit HTTP/1.1
+2024-12-17 10:36:40 - - rajesh! Starting server on port 8080
+2024-12-17 10:36:40 - - Server is running on port 8080
+2024-12-17 10:36:50 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:36:50 - - Request: GET / HTTP/1.1
+2024-12-17 10:36:51 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:36:51 - - Request: GET /favicon.ico HTTP/1.1
+2024-12-17 10:36:55 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:36:55 - - Request: GET /next HTTP/1.1
+2024-12-17 10:36:55 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:37:02 - - Request: GET /home HTTP/1.1
+2024-12-17 10:37:08 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:37:08 - - rajesh Client is connected successfully /0:0:0:0:0:0:0:1
+2024-12-17 10:37:08 - - Request: GET /welcome HTTP/1.1

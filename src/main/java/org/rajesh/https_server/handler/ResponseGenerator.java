@@ -1,10 +1,9 @@
 package org.rajesh.https_server.handler;
-import org.rajesh.https_server.handler.PostRequestHandler;
 
 import java.io.IOException;
 
 public class ResponseGenerator {
-    public String generateResponse(String method, String path,String requestBody){
+    public String generateResponse(String method, String path){
         String httpResponse = "";
         if (method.equals("GET")){
             switch (path) {
@@ -23,28 +22,8 @@ public class ResponseGenerator {
             }
 
         }
-        else if (method.equals("POST")){
-            if(path.equals("/submit")){
 
-                String urlString = "http://localhost:8080" + path;
-                PostRequestHandler postRequest = new PostRequestHandler();
 
-                try{
-                    String responseFromPostRequest = postRequest.sendPostRequest(urlString,requestBody);
-                    httpResponse = "HTTP/1.1 200 OK\r\n" + "Content-Type: application/json\r\n\r\n" + "{\"message\":\"Data received successfully rajesh\", \"body\": \"" + responseFromPostRequest + "\"}";
-
-                }
-                catch (IOException e){
-                    httpResponse = "HTTP/1.1 500 INTERNAL SERVER ERROR\r\n" + "Content-Type: text/plain\r\n\r\n" + "Error processing the POST request: " + e.getMessage();
-                }
-
-            }
-            else{
-                httpResponse = "HTTP/1.1 404 NOT FOUND\r\n" + "Content-Type: text/plain\r\n\r\n" + "The POST route is not found for the path: " + path;
-
-            }
-
-        }
         else{
             httpResponse = "HTTP/1.1 405 Method Not Allowed\r\n" + "Content-Type: text/plain\r\n\r\nMethod not allowed!";
         }

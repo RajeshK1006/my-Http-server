@@ -34,17 +34,11 @@ public class RequestHandler implements  Runnable{
                 String path =  extracts[1];
                 String httpVersion = extracts[2];
 
-                ParseHeaders parser = new ParseHeaders();
 
-                Map<String, String> header = parser.parseHeader(reader);
-
-                RequestBody body = new RequestBody();
-
-                String requestBody = body.parseRequestBody(method,header,reader);
 
                 ResponseGenerator generator = new ResponseGenerator();
 
-                String httpResponse = generator.generateResponse(method,path,requestBody);
+                String httpResponse = generator.generateResponse(method,path);
 
                 output.write(httpResponse.getBytes());
 
